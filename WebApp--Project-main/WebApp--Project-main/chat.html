@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang = "pt-br">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width = device-width, initial-scale=1.0">
+        <title> Home </title>
+
+        <!-- Fonts -->
+        <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- Css -->
+        <link rel = "stylesheet" href="css/style.css">
+
+         <!-- Js file -->
+         <script src = "http://code.jquery.com/jquery-3.4.1.js"></script>
+    </head>
+
+    <body>
+        <div class = "container">
+            <!-- Header -->
+            <header>
+                <a heaf = "#" class="logo"> Mind Care </a>
+                <div id = "menu" class = "fas fa-bars"></div>
+                    
+                
+                <nav class = "menu"> 
+                    <nav class="navbar">
+                        <li> <a href="index.html"> Início </a> </li>
+                        <li> <a href="chat.html"> Chat </a> </li>
+                        <li> <a href="importante.html"> Importante </a></li>
+                    </nav>
+                </nav>
+                        
+                <li> <a href="chat.html" class = "btn">  ESCREVA O QUE ESTÁ NA SUA MENTE </a> </li>
+             
+            </header>    
+
+            <!-- home -->
+            <section class = "home">
+                <div class ="content"> 
+                    <h3> Bem-vindo ao Chat </h3>
+                    <p> Se quiser conversar com um bot, para falar a sua situação com ele e assim receber uma mensagem acolhedora </p>
+                    <p> Aperte o icone do chat no canto inferior da página </p>
+
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section class = "forum">
+                <div class ="forum_format"> 
+                    <h4 class="forum_title"> Se sentir confortável, vamos conversar </h4>
+                    <p class="forum_disc"> Coloque o seu nome e o seu e-mail abaixo que entraremos em contato </p>
+                    
+                    
+
+                    <form action="#" class="email_form">
+                        <input class = "input_email " type="email" placeholder="Nome">
+                        <span class="input_email-border"></span>
+
+                        <input class = "input_email " type="email" placeholder="e-mail">
+                        <span class="input_email-border"></span>
+
+                        <button class = "btn_forum">  ENVIAR </button> 
+                        
+                    </form>
+
+                    
+                    <div class = "alert hide">
+                        <span class = "fas fa-exclamation-circle"></span>
+                        <span class = "msg"> Será enviado um e-mail para você </span>
+                        <span class = "close-btn">
+                            <span class = "fas fa-times"></span>
+                        </span>
+                    </div>
+
+                    <script>
+                        $('button').click(function(){
+                            $('.alert').removeClass ("hide");
+                            $('.alert').addClass ("show");
+                        });
+
+                        $('.close-btn').click(function(){
+                            $('.alert').addClass ("hide");
+                            $('.alert').removeClass ("show");
+                        });
+                    </script>
+ 
+                </div>
+            </section>
+            
+            <!-- sidebar -->
+            <section class = "footer">
+                <div class="box-container">
+                    <div class = "box">
+                        <h3> Sobre </h3>
+                        <p>WebApp</p>
+                        <p> API </p>   
+                    </div>
+                
+                    <div class = "box">
+                        <h3>Criador</h3>
+                        <p> @ Rafael</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ChatBot script -->
+        <script>
+            window.watsonAssistantChatOptions = {
+                integrationID: "3e0290d2-3aae-48c0-ae39-d3e98a9a21e3", // The ID of this integration.
+                region: "us-south", // The region your integration is hosted in.
+                serviceInstanceID: "b9e41b31-e4fc-4b7a-befa-e3382a26b4b4", // The ID of your service instance.
+                onLoad: function(instance) { instance.render(); }
+              };
+            setTimeout(function(){
+              const t=document.createElement('script');
+              t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+              document.head.appendChild(t);
+            });
+        </script>
+    </body>
+</html>

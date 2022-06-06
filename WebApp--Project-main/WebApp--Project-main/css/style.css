@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap');
+
+:root{
+    --main-color: #d3ad7f;
+    --black: black;
+    --bg: #010103;
+    --border: .1rem solid rgba(255, 255, 255, .3);
+    --gradien: linear-gradient()
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s ease-out;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html ::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html ::-webkit-scrollbar-track{
+    background: #333;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem ;
+}
+
+body{
+    padding: 3rem 7%;
+    padding-bottom: 9rem;
+    overflow: hidden;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.container{
+    background: #fff;
+    border-radius: .5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2);
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem 7%;
+    border-bottom: .1rem solid rgba(0,0,0, .1);
+    position: relative;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+header .navbar{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color:#333; 
+    justify-content: space-between;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    
+}
+
+header .navbar a{
+   margin-left: 2rem;
+   font-size: 2rem;
+   color: #333;
+   text-decoration: underline aquamarine;
+}
+
+header .navbar a:hover{
+    color:rgb(127, 187, 255);
+}
+
+#menu{
+    font-size: 2.5rem;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+    border: .1rem solid rgba(179, 122, 122, 0.1);
+    cursor: pointer;
+    display: none;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .8rem 3rem;
+    border-radius: .5rem;
+    background-image: linear-gradient( to right, #00ffff, rgba(79, 153, 221, 0.966), rgb(0, 110, 255) );
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background:rgb(127, 246, 255);
+}
+
+
+
+.home{
+    padding: 15rem 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content h3{
+    color: #010103;
+    background-clip: text;;
+    font-size: 4rem;
+    margin-bottom: 0.1rem;
+}
+
+.home .content p{
+    padding: 1rem 0;
+    color: #010103;
+    background-clip: text;;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+
+}
+
+.home .content h4{
+    color: #010103;
+    background-clip: text;;
+    font-size: 4rem;
+    margin-bottom: 1.8rem;
+    text-decoration: underline #00ffff; 
+}
+
+.home .content p1{
+    padding: 1rem 0;
+    color: #010103;
+    background-clip: text;;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+
+}
+
+
+
+.forum{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forum_format{
+    min-height: 250px;
+    width: 60rem;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 32px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forum_title{
+  font-size: 3rem;
+  margin-bottom: 32px;
+  color: black;
+}
+
+.forum_disc{
+    font-size: 1.5rem;
+    margin-bottom: 60px;
+}
+
+
+.email_form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_email{
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 8px;
+    border: none;
+    outline: none;
+}
+
+.input_email-border{
+    height: 1px;
+    width: 100%;
+    margin-bottom: 16px;
+    background-image: linear-gradient( to right, #00ffff, rgba(79, 153, 221, 0.966), rgb(0, 110, 255) );
+    transition: .3s ease-in-out;
+}
+
+.input_email-border::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 0;
+    margin-bottom: 16px;
+    background: aquamarine;
+    transition: .3s ease-in-out;
+}
+
+.input_email:focus + .input_email-border::after{
+    width: 100%;
+}
+
+.btn_forum{
+    display: inline-block;
+    margin-top: 3rem;
+    padding: .8rem 5rem;
+    border-radius: .5rem;
+    outline: none;
+    background-image: linear-gradient( to right, #00ffff, rgba(79, 153, 221, 0.966), rgb(0, 110, 255) );
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    border: unset;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    margin-bottom: 6rem;
+}
+
+
+.btn_forum:hover{
+    background:rgb(127, 246, 255);
+}
+
+
+.alert{
+    background-image: linear-gradient( to right, #00ffff, rgba(79, 153, 221, 0.966), rgb(0, 110, 255) );
+    padding: 20px 40px;
+    min-width: 420px;
+    position: absolute;
+    right: 0px;
+    top: 150px;
+    overflow: hidden;
+    border-radius: 4px;
+    border-left: 8px solid #00ffff;
+
+}
+
+.alert .show{
+    animation: show_slide 1s ease forwards;
+}
+@keyframes show_slide {
+    0%{
+        transform: translateX(100%);
+    }
+    40%{
+        transform: translateX(-10%);
+    }
+    80%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-10px);
+    }
+}
+
+.alert.hide{
+    display: none;
+}
+
+.alert .fa-exclamation-circle{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: ce8500;
+    font-size: 30px;
+}
+
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+}
+
+.alert .close-btn{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #91b6fc;
+    padding: 20px 18px;
+    cursor: pointer;
+}
+
+.close-btn:hover{
+    background: rgb(0, 110, 255);
+}
+
+.alert .fa-times{
+    color:rgb(0, 110, 255);
+    font-size: 22px;
+    line-height: 40px;
+}
+
+
+
+
+
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    color: rgb(0, 0, 0);
+
+}
+
+.footer .box-container.box{
+    flex: 1 1 20rem;
+}
+
+.footer .box-container.box h3{
+    font-size: 2.5rem;
+    color: #333;
+    padding: .7rem 0; 
+}
+
+.footer .box-container.box p{
+    font-size: 1.5rem;
+    color: #666;
+    padding: .7rem 0;
+}
